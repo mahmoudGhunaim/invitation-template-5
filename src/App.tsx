@@ -32,15 +32,6 @@ const PinIcon = () => (
     <circle cx="24" cy="18" r="5" />
   </svg>
 )
-const DressIcon = () => (
-  <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8"
-       strokeLinecap="round" strokeLinejoin="round" width="44" height="44">
-    <path d="M18 6 L14 18 L6 42 H42 L34 18 L30 6" />
-    <path d="M18 6 Q24 12 30 6" />
-    <line x1="24" y1="6" x2="24" y2="18" />
-  </svg>
-)
-
 // ─── gallery icons — Jordanian motifs ─────────────────────────────────────────
 
 const OliveBranchIcon = () => (
@@ -119,7 +110,6 @@ const C = {
     date: 'التاريخ', dateVal: 'الثلاثاء\n٣٠ يونيو ٢٠٢٦',
     time: 'الوقت', timeVal: 'الساعة ٦ مساءً\nوحتى آخر الليل',
     venue: 'المكان', venueVal: 'قاعات الروابي\nعمّان',
-    dress: 'الزي المطلوب', dressVal: 'سهرة رسمية\nيُرحَّب بالزي التراثي',
     mapTitle: 'خريطة الوصول',
     mapAddr: 'قاعات الروابي للأفراح · عمّان',
     galleryTitle: 'من روح الأصالة',
@@ -153,7 +143,6 @@ const C = {
     date: 'Date', dateVal: 'Tuesday\nJune 30, 2026',
     time: 'Time', timeVal: '6:00 PM\nUntil Late',
     venue: 'Venue', venueVal: 'Al-Rawabi Halls\nAmman',
-    dress: 'Dress Code', dressVal: 'Formal Evening\nTraditional Welcome',
     mapTitle: 'Venue Location',
     mapAddr: 'Al-Rawabi Wedding Halls · Amman',
     galleryTitle: 'Heritage & Joy',
@@ -321,11 +310,6 @@ function LandingPage({ c }: { c: Content }) {
             <div className="detail-icon detail-icon--3"><PinIcon /></div>
             <h3>{c.venue}</h3>
             <p>{c.venueVal.split('\n').map((l, i) => <span key={i}>{l}{i === 0 && <br />}</span>)}</p>
-          </div>
-          <div className="detail-card">
-            <div className="detail-icon detail-icon--4"><DressIcon /></div>
-            <h3>{c.dress}</h3>
-            <p>{c.dressVal.split('\n').map((l, i) => <span key={i}>{l}{i === 0 && <br />}</span>)}</p>
           </div>
         </div>
       </section>
